@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.jumbotron{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#282c34;
+  font-weight:900;
+  
+  background-image: url('https://images.unsplash.com/photo-1657346259456-0f723e944dd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
+
+}
+.jumbotron h1, .jumbotron h4{
+  background-color: white;
+}
+
+.image{
+  height:100%;
+  
+}
+.footer{
+  color:white
+}
+.footer a{
+  color:white
+}
+.footer a:hover{
+  color:white
+}
+.single-book{
+  height:400px;
+  object-fit: contain;
+ 
+}
+.single-card{
+  width:300px;
+  
+}
+
+ 
+
+
