@@ -106,8 +106,11 @@ class BookList extends Component{
 
                    </Col>
                  
-                     <Col xs={3} >
-                  {this.state.current  !== "" ? (<CommentAreaRight id={this.state.current.asin}/>) : (<div>Select a book to view comments</div>)}
+                     <Col xs={3}  className="comments sticky-top pt-5 pb-5 " >
+                   
+                        <h5>{this.state.current.title}</h5>
+
+                  {this.state.current  !== "" ? (<><CommentAreaRight   id={this.state.current.asin}/></>) : (<div>Select a book to view comments</div>)}
                       </Col>
    
 

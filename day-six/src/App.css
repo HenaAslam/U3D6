@@ -36,9 +36,7 @@
     transform: rotate(360deg);
   }
 }
-body{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+
 .jumbotron{
   font-family: Georgia, 'Times New Roman', Times, serif;
   color:#282c34;
@@ -73,7 +71,34 @@ body{
   width:300px;
   
 }
+/* ul li::marker{
+  color:#0E6FC9
+} */
 
+
+.comments{
+  height:100vh;
+border: 1px solid #957DAD;
+background-color: #D291BC;
+color:white;
+position: -webkit-sticky;
+position: sticky;
+top: 100000vh;
+z-index:900;
+overflow:auto;
+
+
+
+}
+.fixed-top{
+  right:0
+}
+.list{
+  color:black;
  
+ 
+}
 
-
+.list-group-item{
+  width:100%
+}

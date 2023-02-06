@@ -11,7 +11,7 @@ class Single extends Component{
         return(
 
 
-             <Col xs={3} className= "mb-1" >
+             <Col xs={6} md={4} className= "mb-1" >
            
             <Card onClick={(e)=>{
                     

@@ -1,16 +1,46 @@
 import { Component } from "react";
 import { Form, Button ,Alert} from "react-bootstrap";
 
+
 class AddComment extends Component{
     state={
         done:false,
+        alert:true,
         commentObject:{
                     comment: "",
                     rate: "",
                      elementId: this.props.id,
+                   
                 },
     }
 
+    componentDidUpdate=(PrevProps, PrevState)=>{
+        if(PrevProps.id !== this.props.id){
+           this.setState({
+            commentObject:{
+               ...this.state.commentObject,
+               elementId:this.props.id
+            }
+           })
+          
+        }
+
+    }
+
+
+
+
+
+
+
+ 
+ alerttimeout=()=>{
+    this.setState({alert:true})
+    setTimeout(() => {
+        this.setState({alert:false})
+   }, 3000)
+ 
+ }
  
     sendComment=async()=>{
 
@@ -26,27 +56,34 @@ class AddComment extends Component{
         })
         if(res.ok){
             this.setState({done:true})
+            this.alerttimeout()
+
+           
+           
         }
+     
     }
-// componentDidMount(){
-//     this.setState({
-//         commentObject:{
-//             ...this.state.commentObject,
-//             elementId:this.props.id
-//         }
-//      })
-// }
+ 
 
     render(){
         return(
+           
             <>
-             {this.state.done && (<Alert variant="success"> Comment added</Alert> ) }
+ 
 
+             {this.state.done && this.state.alert && (
+                 <Alert variant="success" > Comment added</Alert> 
+                
+
+             ) }
+            
 
 <Form  className="d-flex flex-column justify-content-between align-items-center mb-2 mt-5" onSubmit={(e)=>{
     e.preventDefault()
    
     this.sendComment()
+    this.props.fetch()
+   
 }}>
 <Form.Group>
 <Form.Label className="small">Comment</Form.Label>
