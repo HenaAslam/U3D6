@@ -4,7 +4,7 @@ import {Card , Col} from 'react-bootstrap'
 class Single extends Component{
    
     state={
-        selected:false,
+        // selected:false,
        
     }
     render(){
@@ -15,13 +15,19 @@ class Single extends Component{
            
             <Card onClick={(e)=>{
                     
-                this.setState({selected:!this.state.selected},
-                    this.props.change(this.props.bookk)
+                // this.setState({selected:!this.state.selected},
+                   this.props.change(this.props.bookk)
                     
-                    )
+                //     )
             }}
             
-            style={{ border: this.state.selected ? "3px solid red" : "none" }}
+            // style={{ border: this.state.selected ? "3px solid red" : "none" }}
+            style={{
+                border:
+                  this.props.bookTitleProp === this.props.bookk
+                    ? '3px solid red'
+                    : 'none',
+              }}
             >
                     
                         <Card.Img variant="top" src={this.props.bookk?.img} />
