@@ -17,7 +17,7 @@ class CommentAreaRight extends Component{
                         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2NhNTdlM2U3MzczODAwMTUzNzQ2YjMiLCJpYXQiOjE2NzU2OTQxMjEsImV4cCI6MTY3NjkwMzcyMX0.XCiJNQtp5rz9kE16LIrlcsAouLOCn8m62yszme1VQ6Q"     }} )
                     if(response.ok){
                         let data=await response.json()
-                       
+                       console.log("hello")
                       
                         this.setState({
                             comments:data,

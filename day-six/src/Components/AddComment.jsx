@@ -57,6 +57,7 @@ class AddComment extends Component{
         if(res.ok){
             this.setState({done:true})
             this.alerttimeout()
+            this.props.fetch()
 
            
            
@@ -82,7 +83,7 @@ class AddComment extends Component{
     e.preventDefault()
    
     this.sendComment()
-    this.props.fetch()
+   
    
 }}>
 <Form.Group>
